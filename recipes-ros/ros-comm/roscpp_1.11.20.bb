@@ -13,3 +13,6 @@ require ros-comm.inc
 ROS_PKG_SUBDIR = "clients"
 
 CXXFLAGS_append = " -I${OECMAKE_BUILDPATH}/devel/include"
+
+SRC_URI += "file://0001-writev-readv-fix-GCC.patch;striplevel=3"
+

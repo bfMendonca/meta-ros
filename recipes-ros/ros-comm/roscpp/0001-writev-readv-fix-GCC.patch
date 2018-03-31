@@ -1,0 +1,14 @@
+diff --git workspace/sources/roscpp/clients/roscpp/src/libros/transport/transport_udp-orig.cpp workspace/sources/roscpp/clients/roscpp/src/libros/transport/transport_udp.cpp
+index 848893b..bbf6649 100644
+--- a/clients/roscpp/src/libros/transport/transport_udp.cpp
++++ b/clients/roscpp/src/libros/transport/transport_udp.cpp
+@@ -48,6 +48,9 @@
+ #elif defined(__ANDROID__)
+   // For readv() and writev() on ANDROID
+   #include <sys/uio.h>
++#elif defined(_POSIX_VERSION)
++    // For readv() and writev() on ANDROID
++    #include <sys/uio.h>
+ #endif
+ 
+ namespace ros
